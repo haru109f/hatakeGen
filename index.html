@@ -7,6 +7,11 @@
             var inputValue2 = document.getElementById( "hatake" ).value;
             document.getElementById( "check" ).innerHTML = "(　´･" + inputValue + "･`)" + inputValue2;
         }
+        function copy() {
+            var target = document.getElementById("check");
+            
+            navigator.clipboard.writeText(target.innerHTML);
+        }
     </script>
 <h1>畠山ジェネレータ</h1>
 <br>
@@ -17,5 +22,6 @@
 <br>
 <br>
 <div id="check">(　´･畠･`)山</div>
+<button onclick="copy()">クリップボードにコピー</button>
 </body>
 </html>
